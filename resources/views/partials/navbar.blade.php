@@ -30,8 +30,8 @@
             </div>
 
             <div class="text-end">
-                <button type="button" class="btn btn-outline-success">Masuk</button>
-                <button type="button" class="btn btn-success">Daftar</button>
+                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Masuk</button>
+                <a href="register" type="button" class="btn btn-success">Daftar</a>
             </div>
         </div>
     </div>
@@ -45,3 +45,5 @@
         <li><a class="nav-link  mx-5 px-2 dropdown-toggle text-secondary"><span class="bi bi-geo-alt"></span> Dikirim ke <b class="text-dark">Kecamatan, Kabupaten</b></a></li>
     </ul>
 </header>
+
+@include('login.login-modal')
