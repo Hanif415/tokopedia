@@ -15,6 +15,12 @@ return new class extends Migration
     {
         Schema::create('shops', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('product_id');
+            $table->string('profile_image')->nullable();
+            $table->string('shop_name');
+            $table->string('rating');
+            $table->string('time_process')->nullable();
+            $table->string('operation_time')->nullable();
             $table->timestamps();
         });
     }

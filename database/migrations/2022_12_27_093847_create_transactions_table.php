@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('product_id');
             $table->timestamps();
         });
     }

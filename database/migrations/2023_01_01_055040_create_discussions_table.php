@@ -13,8 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('whishlists', function (Blueprint $table) {
+        Schema::create('discussions', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id');
+            $table->foreignId('product_id');
+            $table->text('body');
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('whishlists');
+        Schema::dropIfExists('discussions');
     }
 };

@@ -13,11 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('couriers', function (Blueprint $table) {
+        Schema::create('wishlists', function (Blueprint $table) {
             $table->id();
-            $table->string('courier_name');
-            $table->string('price');
-            $table->string('estimation');
+            $table->foreignId('product_id');
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('couriers');
+        Schema::dropIfExists('whishlists');
     }
 };
